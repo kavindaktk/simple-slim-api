@@ -17,8 +17,6 @@ $app->get('/get_phrase/{name}', function (Request $request, Response $response, 
     return $response;
 });
 
-
-$app = new \Slim\App;
 $app->get('/get_phrase1/{name}', function (Request $request, Response $response, array $args) {
 	    $name = $args['name'];
 	    $rsp["error"] = false;
@@ -29,10 +27,6 @@ $app->get('/get_phrase1/{name}', function (Request $request, Response $response,
 		            ->withStatus(201)
 		            ->withJson($rsp);
 });
-
-
-
-$app = new \Slim\App;
 
 
 $app->add(function ($req, $res, $next) {
